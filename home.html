@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<p>Welcome</p> <div id="b"></div>
+<p id="time"></p>
+<script>
+display();
+function display()
+{
+ var parameters=location.search.substring(1).split('&');
+ var temp=parameters[0].split("=");
+ console.log(temp[1]);
+ document.getElementById("b").innerHTML =temp[1];
+ document.getElementById("time").innerHTML=Date();
+ 
+}
+setTimeout('timer()',5000);
+function timer()
+{
+ 
+alert("Your session expired");
+window.location.assign("index.html");
+}
+</script>
+<body>
+</html>
